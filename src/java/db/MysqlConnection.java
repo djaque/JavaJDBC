@@ -13,13 +13,13 @@ import java.sql.SQLException;
  *
  * @author dany
  */
-public class Connex {
+public class MysqlConnection {
 
     private static Connection con;
     private static final String DB = "sistema";
     private static final String USR = "admin";
     private static final String PASS = "admin";
-    private static final String URL = "jdbc:mysql://localhost/" + DB;
+    private static final String URL = "jdbc:mysql://localhost/" + DB +"?useSSL=false";
 
     /**
      * Open new connection to mysql

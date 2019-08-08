@@ -15,5 +15,7 @@
         <h1>Hello World!</h1>
         
         <a href="test">Test de Conexión con Mysql</a>
+        <br />
+        <a href="user">User CRUD</a>
     </body>
 </html>

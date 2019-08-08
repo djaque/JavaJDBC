@@ -17,7 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import db.Connex;
+import db.MysqlConnection;
 
 /**
  *
@@ -39,7 +39,7 @@ public class Test extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         String body ="";
-        try (Connection conn = Connex.open()) {
+        try (Connection conn = MysqlConnection.open()) {
             Statement stm = conn.createStatement();
             ResultSet rs = stm.executeQuery("Select * from usuarios");
             if (!rs.next()) {
